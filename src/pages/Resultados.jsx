@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer";
 function EstacaoMeteorologica() {
   return (
     <>
-      <Header titulo="Estação meteorologica" />
+      <Header titulo="Estação meteorológica" />
 
       <div className="conteudo">
         <h2>Aprendizados do Projeto</h2>
@@ -20,10 +20,15 @@ function EstacaoMeteorologica() {
 
         <h2>Teste com o sensor de gás</h2>
         <div className="video-container">
-          <video controls>
-            <source src="/video-teste-sensor.mp4" type="video/mp4" />
-            Vídeo de demonstração
-          </video>
+          <iframe
+            width="80%"
+            height="400"
+            src="https://www.youtube.com/embed/ttMMZL5cnOI?si=0fhoyr9fWcqjkOok"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
         </div>
 
         <h2 style={{ marginTop: "40px" }}>Imagens do projeto</h2>
@@ -60,11 +65,8 @@ function EstacaoMeteorologica() {
           margin-top: 20px;
         }
 
-        .video-container video {
-          width: 80%;
-          height: 400px;
+        .video-container iframe {
           border-radius: 10px;
-          background: #000;
           box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
         }
 
