@@ -1,0 +1,57 @@
+.container-faq {
+  width: 90%;
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f5f0db;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* --- Pergunta --- */
+.pergunta button {
+  width: 100%;
+  background-color: #adbae4;
+  border: none;
+  color: #000000;
+  font-size: 1.2rem;
+  text-align: left;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+
+
+/* --- Resposta --- */
+.resposta {
+  padding: 1rem 1.2rem;
+  border-radius: 6px;
+ background-color: #adbae4;
+  color: #000000;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+  .container-faq {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .pergunta button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .resposta {
+    font-size: 0.95rem;
+  }
+}
