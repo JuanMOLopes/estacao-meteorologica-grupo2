@@ -1,0 +1,72 @@
+/* Modo Claro */
+.TextoWikipedia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  border: 1px solid #333;
+  padding: 2rem;
+  width: 90vw;
+  margin: 2rem auto;
+  border-radius: 8px;
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.7;
+  box-shadow: 0 2px 8px #333;
+}
+
+.TextoWikipedia p {
+  padding-top: 1rem;
+  margin: 0;
+  margin-left: 1rem;
+  margin-right: 2rem;
+  text-align: justify;
+}
+
+.TextoWikipedia img {
+  width: 150px;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 10px #e0e0e0);
+}
+
+.conteudo-wikipedia {
+  border-top: 1px dashed #333;
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+}
+
+.conteudo-wikipedia img {
+  padding-top: 1rem;
+  width: 20rem;
+  margin-right: 1rem;
+  border-radius: 12px;
+  filter: none;
+}
+
+/* Modo Escuro */
+body.modo-escuro .TextoWikipedia {
+  color: #e0e0e0;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px #e0e0e0;
+}
+
+body.modo-escuro .TextoWikipedia p {
+  border-top: 1px dashed #e0e0e0;
+}
+
+/* Responsividade */
+@media (max-width: 1023px) {
+  .TextoWikipedia {
+    text-align: center;
+    width: 80vw;
+  }
+
+  .conteudo-wikipedia {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .TextoWikipedia p {
+    text-align: center;
+  }
+}
