@@ -1,16 +1,18 @@
 body {
   font-family: "Lexend", sans-serif;
-  background-color: #f8f8ff;
+  background-color: #f5f7fa; /* fundo geral claro e neutro */
+  color: #1f2b2b; /* texto principal */
 }
 
 body.modo-escuro {
-  background-color: #1b3131;
+  background-color: #062525; /* fundo escuro harmonizado */
+  color: #e9f7f7;
 }
 
 .Container-grp2{
-  background: rgba(245, 245, 245, 0.85);
+  background: #ffffff;
   border-radius: 18px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   padding: 40px 32px 48px 32px;
   margin: 40px auto;
   max-width: 900px;
@@ -18,7 +20,7 @@ body.modo-escuro {
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  color: #222;
+  color: #1f2b2b;
   gap: 20px;
 }
 
@@ -32,14 +34,14 @@ body.modo-escuro {
   width: 45vw;
   height: auto;
   border-radius: 20px;
-  border: 2px solid #444;
+  border: 2px solid rgba(31,43,43,0.12);
 }
 
 /* Homepage */
 .container-home {
-  background-color: #f5f5f5d9;
+  background-color: #f8fafb;
   border-radius: 18px;
-  box-shadow: 0 2px 12px #0000001a;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   padding: 40px 32px 48px 32px;
   margin: 40px auto;
   max-width: 900px;
@@ -47,7 +49,7 @@ body.modo-escuro {
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  color: #222;
+  color: #1f2b2b;
 }
 
 .img-home {
@@ -60,21 +62,21 @@ body.modo-escuro {
   margin-right: 28px;
   float: left;
   transform: translateY(-18px);
-  box-shadow: 0 2px 12px #0000001a;
-  background: #eaeaea;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  background: #eef6f7;
 }
 
 .container-home h1 {
   margin-top: 0;
   margin-bottom: 18px;
   font-size: 2rem;
-  color: #222;
+  color: #0b3a3a; /* título com tom principal */
   clear: both;
 }
 
 .container-home p {
   margin-bottom: 18px;
-  color: #444;
+  color: #4b5f5f;
   font-size: 1.08rem;
   line-height: 1.6;
   max-width: 600px;
@@ -103,14 +105,14 @@ body.modo-escuro {
   gap: 32px;
   justify-content: center;
   padding: 40px;
-  background: #f7f7f7;
+  background: #f8fafb;
   min-height: 60vh;
 }
 
 .favoritos > div {
-  background: #fff;
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 16px #0000001a;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
   padding: 24px 20px;
   max-width: 320px;
   width: 100%;
@@ -130,13 +132,13 @@ body.modo-escuro {
 .favoritos h2 {
   font-size: 1.4rem;
   margin-bottom: 12px;
-  color: #2d2d2d;
+  color: #0b3a3a;
   text-align: center;
 }
 
 .favoritos p {
   font-size: 1rem;
-  color: #444;
+  color: #4b5f5f;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -147,14 +149,14 @@ body.modo-escuro {
   height: auto;
   border-radius: 10px;
   margin-bottom: 12px;
-  border: 3px solid #e0e0e0;
+  border: 3px solid rgba(31,43,43,0.06);
   object-fit: cover;
-  box-shadow: 0 2px 8px #00000014;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .favoritos p:last-child {
   font-weight: bold;
-  color: #007bff;
+  color: #0b7285; /* cor de destaque */
   margin-top: 8px;
 }
 
@@ -164,7 +166,7 @@ body.modo-escuro {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fdf8e8; /* bege claro */
+  background-color: #fbfcfd; /* neutro suave */
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -172,12 +174,12 @@ body.modo-escuro {
 
 /* Cabeçalho da página */
 h1 {
-  background-color: #b0b8f0; /* lilás claro */
+  background-color: #e6f6f8; /* suave com tom do acento */
   padding: 15px 20px;
   border-radius: 20px;
   text-align: center;
   font-size: 1.5rem;
-  color: #000;
+  color: #0b3a3a;
 }
 
 /* Blocos lado a lado (texto e imagem) */
@@ -193,7 +195,7 @@ h1 {
   flex: 1;
   min-width: 250px;
   font-size: 1rem;
-  color: #333;
+  color: #4b5f5f;
 }
 
 /* Imagens dos componentes */
@@ -203,7 +205,7 @@ h1 {
   height: auto;
   border-radius: 15px;
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
 }
 
 /* Específicos do Wokwi - container vertical de imagens */
@@ -234,58 +236,58 @@ h1 {
 
 /* Estilos para modo escuro */
 body.modo-escuro .container-home  {
-  background: #1b3131;
-  color: #f1f1f1;
-  box-shadow: 0 2px 16px rgba(255, 255, 255, 0.25);
+  background: #0b3a3a;
+  color: #e9f7f7;
+  box-shadow: 0 2px 16px rgba(233, 247, 247, 0.06);
 }
 
 body.modo-escuro .Container-grp2 {
-  background: #1b3131;
-  color: #f1f1f1;
-  box-shadow: 0 2px 16px rgba(255, 255, 255, 0.25);
+  background: #0b3a3a;
+  color: #e9f7f7;
+  box-shadow: 0 2px 16px rgba(233, 247, 247, 0.06);
 }
 
 body.modo-escuro .container-home h1 {
-  color: #fafafa;
+  color: #e9f7f7;
 }
 
 body.modo-escuro .container-home p {
-  color: #d1d1d1;
+  color: #cfecec;
 }
 
 body.modo-escuro .container-home p:last-child {
-  color: #e0e0e0;
+  color: #e9f7f7;
 }
 
 body.modo-escuro .img-home {
-  background: #1b3131;
-  box-shadow: 0 2px 16px #0000002e;
+  background: transparent;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.4);
 }
 
 body.modo-escuro .favoritos {
-  background: #1b3131;
+  background: #062525;
 }
 
 body.modo-escuro .favoritos > div {
-  background: #1b3131;
-  box-shadow: 0 2px 16px rgba(255, 255, 255, 0.25);
+  background: #0b3a3a;
+  box-shadow: 0 2px 16px rgba(233, 247, 247, 0.04);
 }
 
 body.modo-escuro .favoritos h2 {
-  color: #fafafa;
+  color: #e9f7f7;
 }
 
 body.modo-escuro .favoritos p {
-  color: #cccccc;
+  color: #cfecec;
 }
 
 body.modo-escuro .favoritos img {
-  border: 3px solid #333;
-  box-shadow: 0 2px 12px #0000002e;
+  border: 3px solid rgba(233,247,247,0.06);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
 
 body.modo-escuro .favoritos p:last-child {
-  color: #007bff;
+  color: #75c7cf;
 }
 
 /* Responsividade */
@@ -339,6 +341,81 @@ body.modo-escuro .favoritos p:last-child {
   iframe {
     width: 100%;
     height: 250px;
+  }
+}
+
+/* Página Software */
+.software {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  color: #1f2b2b;
+}
+
+.software h2 {
+  background: linear-gradient(90deg,#e6f6f8, #f8fafb);
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: #0b3a3a;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.secao-definicao-software p,
+.resumo-tecnico p,
+.resumo-tecnico li {
+  color: #4b5f5f;
+  line-height: 1.6;
+}
+
+.resumo-tecnico ul {
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+.secao-codigo-fonte pre {
+  max-height: 420px;
+  overflow: auto;
+  background: #0b2f32;
+  color: #e9f7f7;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* dark mode for Software page */
+body.modo-escuro .software {
+  background: #062525;
+  box-shadow: 0 6px 20px rgba(233,247,247,0.02);
+  color: #e9f7f7;
+}
+
+body.modo-escuro .software h2 {
+  background: linear-gradient(90deg, rgba(233,247,247,0.02), rgba(11,58,58,0.06));
+  color: #e9f7f7;
+}
+
+body.modo-escuro .secao-codigo-fonte pre {
+  background: #041717;
+  color: #dff9f9;
+}
+
+@media (max-width: 1023px) {
+  .software {
+    padding: 18px;
+    margin: 16px auto;
+  }
+
+  .secao-codigo-fonte pre {
+    max-height: 260px;
   }
 }
 
