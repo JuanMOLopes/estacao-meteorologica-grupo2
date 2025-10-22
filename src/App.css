@@ -158,6 +158,80 @@ body.modo-escuro {
   margin-top: 8px;
 }
 
+/* Container principal das páginas */
+.container-hardware,
+.container-Simulacao {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fdf8e8; /* bege claro */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Cabeçalho da página */
+h1 {
+  background-color: #b0b8f0; /* lilás claro */
+  padding: 15px 20px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+/* Blocos lado a lado (texto e imagem) */
+.Lado-a-lado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.Lado-a-lado p {
+  flex: 1;
+  min-width: 250px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Imagens dos componentes */
+.Lado-a-lado img {
+  flex: 1;
+  max-width: 350px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Específicos do Wokwi - container vertical de imagens */
+.Cima-Baixo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Blocos lado a lado das imagens Wokwi */
+.Cima-Baixo .Lado-a-lado {
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Imagens Wokwi */
+.Wokwi1, .Wokwi2, .Wokwi3, .Wokwi4, .Wokwi5 {
+  max-width: 45%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Imagem final Wokwi5 centralizada */
+.Wokwi5 {
+  max-width: 70%;
+}
+
 /* Estilos para modo escuro */
 body.modo-escuro .container-home  {
   background: #1b3131;
@@ -253,6 +327,14 @@ body.modo-escuro .favoritos p:last-child {
   }
   .container-home h1 {
     font-size: 1.3rem;
+  }
+    .Lado-a-lado, .Cima-Baixo .Lado-a-lado {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Lado-a-lado img, .Wokwi1, .Wokwi2, .Wokwi3, .Wokwi4, .Wokwi5 {
+    max-width: 90%;
   }
   iframe {
     width: 100%;
