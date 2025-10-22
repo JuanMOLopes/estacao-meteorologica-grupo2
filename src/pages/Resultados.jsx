@@ -21,7 +21,7 @@ function EstacaoMeteorologica() {
         <h2>Teste com o sensor de gás</h2>
         <div className="video-container">
           <video controls>
-            <source src="video-teste-sensor.mp4" type="video/mp4" />
+            <source src="/video-teste-sensor.mp4" type="video/mp4" />
             Vídeo de demonstração
           </video>
         </div>
@@ -33,7 +33,7 @@ function EstacaoMeteorologica() {
         </div>
       </div>
 
-      <style>
+      <style>{`
         .conteudo {
           font-family: Arial, Helvetica, sans-serif;
           line-height: 1.6;
@@ -86,7 +86,7 @@ function EstacaoMeteorologica() {
         .galeria img:hover {
           transform: scale(1.05);
         }
-      </style>
+      `}</style>
 
       <Footer />
     </>
