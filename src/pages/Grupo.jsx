@@ -2,6 +2,8 @@ import "../App.css"
 import Header from "../src/components/Header/Header";
 import Footer from "../src/components/Footer/Footer";
 import GrupoImg from "/Grupo2Foto.jpeg";
+import TextoDireita from "../components/TextoDireita/TextoDireita";
+import TextoEsquerda from "../components/TextoEsquerda/TextoEsquerda";
 
 function Grupo() {
   return (
@@ -21,16 +23,34 @@ function Grupo() {
        <div className="secao-texto">
           <TextoEsquerda
             titulo="Feito por: Agatha"
-            texto="-Página:O projeto
-            -Página:Perguntas e respostas"
+            texto="-Páginas: O projeto e perguntas e respostas"
 
             imagem=" "
-
+ />
             <TextoDireita
             titulo="Feito por: Ana"
             texto=" -Página: Resultados"
             imagem=""
           />
+
+          <TextoEsquerda
+            titulo="Feito por: Juan"
+            texto="-Páginas: Home e Software"
+
+            imagem=" "
+ />
+  <TextoDireita
+            titulo="Feito por: Lucas"
+            texto=" -Páginas: Simulação Wokwi e Hardware"
+            imagem=""
+          />
+
+           <TextoEsquerda
+            titulo="Feito por: Zayra"
+            texto="-Página:Grupo 2 "
+
+            imagem=" "
+ />
          </div>
       <Footer />
     </>
