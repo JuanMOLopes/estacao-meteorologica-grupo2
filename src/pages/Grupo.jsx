@@ -40,7 +40,7 @@ function Grupo() {
 
         <TextoEsquerda
           titulo="Feito por: Juan"
-          texto="-Páginas: Home e Software"
+          texto="-Página:Software"
           imagem="public/1000072746.jpg"
         />
         <TextoDireita
@@ -51,7 +51,7 @@ function Grupo() {
 
         <TextoEsquerda
           titulo="Feito por: Zayra"
-          texto="-Página: Grupo 2"
+          texto="-Páginas: Grupo 2 e home"
           imagem="public/1000072788.jpg"
         />
       </div>
