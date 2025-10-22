@@ -54,25 +54,6 @@ body.modo-escuro .resposta p {
   color: #e0e0e0;
 }
 
-/* Responsividade */
-@media (max-width: 1023px) {
-  .container-texto-direita {
-    flex-direction: column-reverse;
-  }
-
-  .imagem-esquerda {
-    width: 100%;
-  }
-
-  .texto-direita {
-    text-align: center;
-  }
-
- 
-
-
-
-
 
 /* --- Responsividade --- */
 @media (max-width: 768px) {
