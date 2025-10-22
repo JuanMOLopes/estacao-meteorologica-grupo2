@@ -2,6 +2,7 @@ import FAQ from "../components/FAQ/FAQ";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
+
 function PerguntasERespostas() {
   const faq = [
     {
