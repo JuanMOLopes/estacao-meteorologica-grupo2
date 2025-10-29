@@ -71,6 +71,17 @@ body.modo-escuro {
   background: linear-gradient(180deg, #fffaf8, #ffffff);
 }
 
+.diagram-home {
+  width: 700px;
+  max-width: 720px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(34, 43, 82, 0.06);
+  border: 1px solid rgba(34, 43, 82, 0.04);
+  background: linear-gradient(180deg, #fffaf8, #ffffff);
+}
+
 .container-home h1 + .Lado-a-lado {
   margin-top: 0.5rem;
 }
