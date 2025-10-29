@@ -365,9 +365,12 @@ body.modo-escuro .software {
   background: linear-gradient(180deg, rgba(34, 43, 82, 0.06), rgba(0, 0, 0, 0.02));
   box-shadow: none;
   border: 1px solid rgba(255, 255, 255, 0.04);
+  color:#e6eef8
 }
 
 body.modo-escuro .secao-definicao-software p,
+body.modo-escuro .secao-definicao-software h2,
+body.modo-escuro .resumo-tecnico h2,
 body.modo-escuro .resumo-tecnico li {
   background: transparent;
   color: #e6e8f3;
