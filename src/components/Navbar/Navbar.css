@@ -25,8 +25,17 @@ nav a {
 
 nav a:hover {
   font-weight: bold;
-  background-color: #adbae4;
+  background-color: #f8f7f0;
   color: #134470;
+}
+
+/* Responsividade */
+@media (max-width: 1023px) {
+  nav {
+    min-height: auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
 }
 
 /* Modo Escuro */

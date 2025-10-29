@@ -21,6 +21,10 @@ function Projeto() {
             texto="A Internet das Coisas (IoT) surge como a solução ideal para esse desafio de monitoramento. Por meio da integração de hardware e software, a IoT permite a instalação de sensores específicos (como o DHT11 e o MQ-135, no caso do projeto) que fazem a leitura automática dos parâmetros ambientais (temperatura, umidade e gases). O grande diferencial é a comunicação em tempo real: um microcontrolador (ESP32) coleta esses dados e os envia instantaneamente, via Wi-Fi, para uma plataforma central (servidor Mosquitto). Isso elimina a necessidade de checagens manuais e possibilita a visualização imediata em qualquer lugar (via cliente MQTT no celular), transformando a coleta de dados isolada em um sistema de vigilância contínuo e inteligente."
             imagem="/projeto-img2.png"
           />
+          <div className="imagens-solucao">
+            <img src="/servidor.png" alt="Imagem 1" />
+            <img src="/celular.png" alt="Imagem 2" />
+          </div>
         </div>
       </div>
 

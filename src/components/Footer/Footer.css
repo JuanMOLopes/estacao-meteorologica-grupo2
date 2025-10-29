@@ -88,6 +88,13 @@ body.modo-escuro footer .lado-a-lado h3 {
 
 /* Responsividade */
 @media (max-width: 1023px) {
+  footer {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  footer .lado-a-lado {
+    gap: 1.5rem;
+  }
   footer #contato a {
     display: flex;
     flex-direction: column;
