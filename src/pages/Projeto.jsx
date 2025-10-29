@@ -14,7 +14,7 @@ function Projeto() {
           <TextoEsquerda
             titulo="O Problema"
             texto="Monitorar com precisão fatores como temperatura, umidade e a concentração de gases poluentes (qualidade do ar) é fundamental não apenas para o conforto, mas, principalmente, para a saúde e a segurança.Variações extremas de temperatura e umidade podem afetar a conservação de equipamentos, produtos e a integridade estrutural de ambientes. Mais crucialmente, a má qualidade do ar, resultante do acúmulo de gases nocivos ou da falta de ventilação, é um fator de risco direto, podendo causar problemas respiratórios e, em casos mais graves, intoxicações. Portanto, ter dados confiáveis e em tempo real sobre esses parâmetros é o primeiro passo para tomar decisões proativas e manter ambientes salubres e controlados."
-            imagem="/projeto-img1.png"
+            imagem="/imagem-problema.png"
           />
           <TextoDireita
             titulo="A Solução"
