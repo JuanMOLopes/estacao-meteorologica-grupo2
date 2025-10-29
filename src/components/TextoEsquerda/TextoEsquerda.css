@@ -33,10 +33,14 @@
   color: #333;
 }
 
+
+
+
 .texto-esquerda h2 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
+  color: #134470;
 }
 
 .texto-esquerda p {
@@ -54,13 +58,7 @@ body.modo-escuro .texto-esquerda p {
   color: #e0e0e0;
 }
 
-body.modo-escuro .favoritar {
-  border-bottom: 1px solid #e0e0e0;
-}
 
-body.modo-escuro .favoritar p {
-  color: #e0e0e0;
-}
 
 /* Responsividade */
 @media (max-width: 1023px) {
