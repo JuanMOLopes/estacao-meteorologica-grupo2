@@ -1,7 +1,7 @@
 import "../App.css";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import GrupoImg from "/foto-grupo.jpeg";
+import GrupoImg from "/foto-grupo.png";
 import TextoDireita from "../components/TextoDireita/TextoDireita";
 import TextoEsquerda from "../components/TextoEsquerda/TextoEsquerda";
 
@@ -30,29 +30,29 @@ function Grupo() {
         <TextoEsquerda
           titulo="Feito por: Agatha"
           texto="Páginas: O projeto e perguntas e respostas"
-          imagem="/foto-agatha.jpg"
+          imagem="/foto-agatha.png"
         />
         <TextoDireita
           titulo="Feito por: Ana"
           texto="Página: Resultados"
-          imagem="/foto-ana.jpg"
+          imagem="/foto-ana.png"
         />
 
         <TextoEsquerda
           titulo="Feito por: Juan"
           texto="Página: Software"
-          imagem="/foto-juan.jpg"
+          imagem="/foto-juan.png"
         />
         <TextoDireita
           titulo="Feito por: Lucas"
           texto="Páginas: Simulação Wokwi e Hardware"
-          imagem="/foto-lucas.jpg"
+          imagem="/foto-lucas.png"
         />
 
         <TextoEsquerda
           titulo="Feito por: Zayra"
           texto="Páginas: Grupo 2 e Home"
-          imagem="/foto-zayra.jpg"
+          imagem="/foto-zayra.png"
         />
       </div>
       <Footer />
