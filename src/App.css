@@ -464,6 +464,7 @@ body.modo-escuro .conteudo {
 }
 
 body.modo-escuro .conteudo p,
+body.modo-escuro .conteudo h2,
 body.modo-escuro .galeria img,
 body.modo-escuro .video-container iframe {
   background: transparent;
