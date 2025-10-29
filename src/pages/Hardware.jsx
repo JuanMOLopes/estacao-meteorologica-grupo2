@@ -10,12 +10,15 @@ function Hardware() {
     <>
       <Header titulo="Hardware" />
       <div className="container-hardware">
-        <h1>
-          O que é um Hardware? Hardware é um conjunto de componentes físicos que
-          compõem um sistema computacional. No contexto de uma estação
-          meteorológica, o hardware é responsável por coletar, processar e
-          transmitir dados ambientais.
-        </h1>
+        <div className="secao-definicao-hardware">
+          <h2>Definição</h2>
+          <p>
+            Segundo o dicionário Oxford Languages, hardware é um conjunto de
+            componentes físicos que compõem um sistema computacional. No
+            contexto de uma estação meteorológica, o hardware é responsável por
+            coletar, processar e transmitir dados ambientais.
+          </p>
+        </div>
 
         <TextoEsquerda
           titulo="LEDs"
