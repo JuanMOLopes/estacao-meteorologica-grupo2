@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer";
 function EstacaoMeteorologica() {
   return (
     <>
-      <Header titulo="Estação meteorológica" />
+      <Header titulo="Resultados" />
 
       <div className="conteudo">
         <h2>Aprendizados do Projeto</h2>

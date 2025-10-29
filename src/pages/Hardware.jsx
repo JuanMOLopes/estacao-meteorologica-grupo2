@@ -8,7 +8,7 @@ import TextoEsquerda from "../components/TextoEsquerda/TextoEsquerda";
 function Hardware() {
   return (
     <>
-      <Header titulo="Hardware" />
+      <Header titulo="Sobre o hardware" />
       <div className="container-hardware">
         <div className="secao-definicao-hardware">
           <h2>Definição</h2>

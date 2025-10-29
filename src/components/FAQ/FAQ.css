@@ -10,7 +10,7 @@
 .pergunta button {
   width: 100%;
   text-align: left;
-  background: linear-gradient(90deg, #b25640 0%, #b25640 100%);
+  background: linear-gradient(90deg, #134470 0%, #134470 100%);
   color: #f8f7f0;
   border: none;
   padding: 0.95rem 1rem;
@@ -30,7 +30,7 @@
 }
 
 .resposta {
-  background: #ffffff;
+  background: #adbae4;
   color: #222b52;
   padding: 0.9rem 1rem;
   border-radius: 8px;
