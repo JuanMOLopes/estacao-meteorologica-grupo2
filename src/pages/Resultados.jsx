@@ -33,8 +33,8 @@ function EstacaoMeteorologica() {
 
         <h2 style={{ marginTop: "40px" }}>Imagens do projeto</h2>
         <div className="galeria">
-          <img src="/Projeto01.jpg" alt="Imagem 1" />
-          <img src="/Projeto3.jpg" alt="Imagem 2" />
+          <img src="/Projeto01.png" alt="Imagem 1" />
+          <img src="/Projeto3.png" alt="Imagem 2" />
         </div>
       </div>
 
