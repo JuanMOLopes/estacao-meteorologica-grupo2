@@ -378,7 +378,8 @@ body.modo-escuro .resumo-tecnico li {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-body.modo-escuro .secao-codigo-fonte pre {
+body.modo-escuro .secao-codigo-fonte pre,
+body.modo-escuro .secao-codigo-fonte h2 {
   background: #071223;
   color: #e6eef8;
   border: 1px solid rgba(255, 255, 255, 0.04);
