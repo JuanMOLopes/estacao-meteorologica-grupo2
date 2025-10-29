@@ -92,6 +92,10 @@ body.modo-escuro .container-home h1 {
   color: #f8f7f0;
 }
 
+body.modo-escuro .container-home p {
+  color: #e6e8f3;
+}
+
 body.modo-escuro .Lado-a-lado p {
   background: transparent;
   color: #e6e8f3;
