@@ -45,45 +45,6 @@
   color: #333;
 }
 
-.favoritar {
-  width: 90rem;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  gap: 1rem;
-  margin-top: 1rem;
-  justify-content: flex-end;
-  border-bottom: 1px solid #333;
-}
-
-.favoritar button {
-  background-color: #007bff;
-  border: none;
-  font-size: 1.4rem;
-  border-radius: 6px;
-  padding: 0.4rem 0.7rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  user-select: none;
-  margin-bottom: 2rem;
-}
-
-.favoritar button:hover {
-  background-color: #0056b3;
-}
-
-.favoritar button:active {
-  background-color: #003d7a;
-}
-
-.favoritar p {
-  font-weight: 700;
-  font-size: 1.2rem;
-  min-width: 2rem;
-  text-align: center;
-  color: #333;
-  margin-bottom: 2rem;
-}
 
 /* Modo escuro */
 body.modo-escuro .texto-direita h2 {

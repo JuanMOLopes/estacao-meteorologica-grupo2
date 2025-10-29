@@ -24,7 +24,7 @@ body.modo-escuro {
 }
 
 .container-home h1 {
-  color: #b25640;
+  color: #134470;
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -229,7 +229,7 @@ body.modo-escuro .container-Simulacao img {
 }
 
 .secao-definicao-hardware h2 {
-  color: #b25640;
+  color: #134470;
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -292,7 +292,7 @@ body.modo-escuro .secao-definicao-hardware p {
 .secao-definicao-software h2,
 .resumo-tecnico h2,
 .secao-codigo-fonte h2 {
-  color: #b25640;
+  color: #134470;
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -386,7 +386,7 @@ body.modo-escuro .secao-codigo-fonte pre {
 }
 
 .conteudo h2 {
-  color: #b25640;
+  color: #134470;
   font-size: 1.45rem;
   font-weight: 700;
   text-transform: uppercase;
