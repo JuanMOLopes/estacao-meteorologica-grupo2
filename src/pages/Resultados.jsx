@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer";
 function EstacaoMeteorologica() {
   return (
     <>
-      <Header titulo="Estação meteorológica" />
+      <Header titulo="Resultados" />
 
       <div className="conteudo">
         <h2>Aprendizados do Projeto</h2>
@@ -34,7 +34,7 @@ function EstacaoMeteorologica() {
         <h2 style={{ marginTop: "40px" }}>Imagens do projeto</h2>
         <div className="galeria">
           <img src="/Projeto01.png" alt="Imagem 1" />
-          <img src="/Projeto02.png" alt="Imagem 2" />
+          <img src="/Projeto3.png" alt="Imagem 2" />
         </div>
       </div>
 

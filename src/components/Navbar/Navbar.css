@@ -6,7 +6,7 @@ nav {
   justify-content: center;
   gap: 1.5rem;
   padding: 1rem 2rem;
-  background-color: #b25640;
+  background-color: #134470;
   min-height: 15vh;
   transition: background-color 0.3s;
 }
@@ -25,8 +25,8 @@ nav a {
 
 nav a:hover {
   font-weight: bold;
-  background-color: #f8f7f0;
-  color: #b25640;
+  background-color: #adbae4;
+  color: #134470;
 }
 
 /* Modo Escuro */

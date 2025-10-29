@@ -24,7 +24,7 @@ body.modo-escuro {
 }
 
 .container-home h1 {
-  color: #b25640;
+  color: #134470;
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -63,6 +63,17 @@ body.modo-escuro {
 .img-home {
   width: 420px;
   max-width: 40%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(34, 43, 82, 0.06);
+  border: 1px solid rgba(34, 43, 82, 0.04);
+  background: linear-gradient(180deg, #fffaf8, #ffffff);
+}
+
+.diagram-home {
+  width: 700px;
+  max-width: 720px;
   height: auto;
   border-radius: 10px;
   object-fit: cover;
@@ -229,7 +240,7 @@ body.modo-escuro .container-Simulacao img {
 }
 
 .secao-definicao-hardware h2 {
-  color: #b25640;
+  color: #134470;
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -292,7 +303,7 @@ body.modo-escuro .secao-definicao-hardware p {
 .secao-definicao-software h2,
 .resumo-tecnico h2,
 .secao-codigo-fonte h2 {
-  color: #b25640;
+  color: #134470;
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -354,9 +365,12 @@ body.modo-escuro .software {
   background: linear-gradient(180deg, rgba(34, 43, 82, 0.06), rgba(0, 0, 0, 0.02));
   box-shadow: none;
   border: 1px solid rgba(255, 255, 255, 0.04);
+  color:#e6eef8
 }
 
 body.modo-escuro .secao-definicao-software p,
+body.modo-escuro .secao-definicao-software h2,
+body.modo-escuro .resumo-tecnico h2,
 body.modo-escuro .resumo-tecnico li {
   background: transparent;
   color: #e6e8f3;
@@ -386,7 +400,7 @@ body.modo-escuro .secao-codigo-fonte pre {
 }
 
 .conteudo h2 {
-  color: #b25640;
+  color: #134470;
   font-size: 1.45rem;
   font-weight: 700;
   text-transform: uppercase;

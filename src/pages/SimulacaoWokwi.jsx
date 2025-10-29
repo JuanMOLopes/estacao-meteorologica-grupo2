@@ -7,6 +7,8 @@ function SimulacaoWokwi() {
     <>
       <Header titulo="Simulação Wokwi" />
       <div className="container-Simulacao">
+        <iframe src="https://wokwi.com/projects/444885255178513409" height="550" width="1050" title="Simulação Wokwi"></iframe>
+
         <h1>Simulação digital Wokwi em estágios!</h1>
 
         <div className="Cima-Baixo">
