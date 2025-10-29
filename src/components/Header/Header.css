@@ -5,13 +5,12 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #e0e0e0;
+  background-color: #b25640;
   transition: background-color 0.3s;
-
 }
 
 header h1 {
-  color: #333;
+  color: #f8f7f0;
   font-size: 3rem;
   text-align: center;
   text-transform: uppercase;
@@ -28,16 +27,16 @@ header a {
 header img {
   width: 150px;
   height: auto;
-  filter: drop-shadow(0 0 5px #e0e0e0);
+  margin-left: 3rem;
 }
 
 /* Modo Escuro */
 body.modo-escuro header {
-  background-color: #152828;
+  background-color: #222b52;
 }
 
 body.modo-escuro header h1 {
-  color: #e0e0e0;
+  color: #f8f7f0;
 }
 
 /* Responsividade */

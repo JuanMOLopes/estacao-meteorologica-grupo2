@@ -1,6 +1,6 @@
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import codigoFonte from "./codigoFonte.txt?raw";
+import codigoFonte from "./codigoFonte.ino?raw";
 
 export default function Software() {
   return (
