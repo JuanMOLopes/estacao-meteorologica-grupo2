@@ -8,6 +8,7 @@ function FAQ(props) {
     <div className="container-faq">
       <div className="pergunta">
         <button onClick={() => setMostrarResposta(!mostrarResposta)}>
+           {/* ! inverte o valor atual (falço -> verdadeiro) */}
           {props.pergunta}
         </button>
       </div>

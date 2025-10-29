@@ -3,8 +3,13 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
 function PerguntasERespostas() {
+
   const faq = [
+  // Array de objetos que será usado para criar múltiplos componentes FAQ
+  // Cada objeto contém uma pergunta e resposta que serão passadas como props
     {
+       // Estas informações serão passadas como props.pergunta e props.resposta
+      // para o componente FAQ, que as exibirá de forma interativa
       pergunta: "O que é o projeto 'Estação Meteorológica IoT'?",
       resposta:
         "É um sistema inteligente que usa um pequeno computador (ESP32) e sensores para medir coisas importantes do ambiente, como a temperatura, a umidade do ar e a qualidade do ar, e enviar esses dados pela internet para que você possa vê-los em tempo real no seu celular.",
@@ -122,6 +127,15 @@ function PerguntasERespostas() {
   return (
     <>
       <Header titulo="Perguntas e Respostas" />
+      {/* Para cada objeto no array perguntas, cria um componente FAQ
+          O componente FAQ receberá:
+          - key: identificador único requerido pelo React
+          - pergunta: será acessado no FAQ como props.pergunta
+          - resposta: será acessado no FAQ como props.resposta 
+          
+          O FAQ então usará estas props para:
+          1. Mostrar a pergunta em um botão
+          2. Mostrar/ocultar a resposta quando o botão for clicado */}
 
       {faq.map((item, index) => (
         <FAQ
