@@ -7,7 +7,8 @@ function EstacaoMeteorologica() {
       <Header titulo="Resultados" />
 
       <div className="conteudo">
-        <h2>Aprendizados do Projeto</h2>
+
+        <h2>Aprendizados do projeto</h2>
         <p>
           Durante as etapas de desenvolvimento da estação meteorológica e de estudo sobre servidores Broker e clientes MQTT,
           adquirimos aprendizados e obtivemos experiências de grande importância, como a integração entre hardware e software,
@@ -18,16 +19,19 @@ function EstacaoMeteorologica() {
           programação e eletrônica.
         </p>
 
+        {/* exibe o vídeo do YouTube mostrando o teste com o sensor de gás */}
         <h2>Teste com o sensor de gás</h2>
         <div className="video-container">
+          {/* iFrame responsável por incorporar o vídeo do YouTube na página */}
           <iframe
-            width="80%"
-            height="400"
-            src="https://www.youtube.com/embed/ttMMZL5cnOI?si=0fhoyr9fWcqjkOok"
-            title="YouTube video player"
-            frameBorder="0"
+            width="80%"            // largura do vídeo
+            height="400"          // altura do vídeo
+            src="https://www.youtube.com/embed/ttMMZL5cnOI?si=0fhoyr9fWcqjkOok" 
+            title="YouTube video player" // texto alternativo (acessibilidade)
+            frameBorder="0"       // remove a borda padrão do iFrame
+            // permite autoplay, uso do giroscópio, copiar/colar etc.
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
+            allowFullScreen       // tela cheia
           ></iframe>
         </div>
          
