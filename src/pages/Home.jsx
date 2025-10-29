@@ -46,6 +46,14 @@ function Home() {
         </p>
 
         <img src="/home-projeto2.png" alt="img" className="img-home" />
+
+        <h1>Diagrama:</h1>
+
+        <p>
+          Este diagrama ilustra o processo de comunicação entre os componentes do sistema IoT, desde a coleta dos dados até sua visualização final. O sensor DHT22 envia os sinais ao ESP32, que converte as informações em mensagens MQTT e publica via Wi-Fi. O Broker atua como mediador, repassando as mensagens aos clientes inscritos, que por fim recebem, interpretam e exibem os dados em tempo real.
+        </p>
+
+        <img src="/public/diagrama.png" alt="img" className="diagram-home" />
       </div>
 
       <Footer />
