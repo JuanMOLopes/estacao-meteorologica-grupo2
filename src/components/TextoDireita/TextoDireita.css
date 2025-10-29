@@ -17,8 +17,9 @@
 }
 
 .imagem-esquerda {
-  width: 25rem;
-  height: auto;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 25rem;
 }
 
 .imagem-esquerda img {
@@ -69,6 +70,8 @@ body.modo-escuro .favoritar p {
 @media (max-width: 1023px) {
   .container-texto-direita {
     flex-direction: column-reverse;
+    padding: 20px;
+    gap: 20px;
   }
 
   .imagem-esquerda {

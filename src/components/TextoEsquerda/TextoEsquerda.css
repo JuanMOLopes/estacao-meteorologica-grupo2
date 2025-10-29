@@ -17,8 +17,9 @@
 }
 
 .imagem-direita {
-  width: 25rem;
-  height: auto;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 25rem;
 }
 
 .imagem-direita img {
@@ -64,6 +65,8 @@ body.modo-escuro .texto-esquerda p {
 @media (max-width: 1023px) {
   .container-texto-esquerda {
     flex-direction: column;
+    padding: 20px;
+    gap: 20px;
   }
 
   .imagem-direita {
