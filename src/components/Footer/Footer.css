@@ -1,7 +1,7 @@
 /* Modo Claro */
 footer {
-  background-color: #e0e0e0;
-  color: #333;
+  background-color: #134470;
+  color: #f8f7f0;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@ footer {
 }
 
 footer a {
-  color: #333;
+  color: #f8f7f0;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -30,66 +30,65 @@ footer img {
   height: 24px;
 }
 
-.lado-a-lado {
+footer .lado-a-lado {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
 }
 
-.lado-a-lado div {
+footer .lado-a-lado div {
   min-width: 200px;
 }
 
-.lado-a-lado h3 {
+footer .lado-a-lado h3 {
   text-transform: uppercase;
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  color: #111;
+  color: #f8f7f0;
 }
 
-.lado-a-lado ul {
+footer .lado-a-lado ul {
   list-style: none;
   padding: 0;
 }
 
-.lado-a-lado li {
+footer .lado-a-lado li {
   margin: 0.3rem 0;
 }
 
-.curso p {
+footer .curso p {
   margin: 0.3rem 0;
   font-style: italic;
 }
 
-.logo {
+footer .logo {
   width: 150px;
   height: auto;
 }
 
 /* Modo Escuro */
 body.modo-escuro footer {
- background-color: #152828;
-  box-shadow: 0 2px 16px rgba(255, 255, 255, 0.500);
-  color: #e0e0e0;
+  background-color: #222b52;
+  color: #f8f7f0;
 }
 
 body.modo-escuro footer a {
-  color: #e0e0e0;
+  color: #f8f7f0;
 }
 
 body.modo-escuro footer a:hover {
-  color: #e0e0e0;
+  color: #f8f7f0;
   text-decoration: underline;
 }
 
-body.modo-escuro .lado-a-lado h3 {
-  color: #e0e0e0;
+body.modo-escuro footer .lado-a-lado h3 {
+  color: #f8f7f0;
 }
 
 /* Responsividade */
 @media (max-width: 1023px) {
-  #contato a {
+  footer #contato a {
     display: flex;
     flex-direction: column;
     align-items: center;
