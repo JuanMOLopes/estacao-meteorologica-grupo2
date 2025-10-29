@@ -6,14 +6,14 @@ nav {
   justify-content: center;
   gap: 1.5rem;
   padding: 1rem 2rem;
-  background-color: #e0e0e0;
+  background-color: #134470;
   min-height: 15vh;
   transition: background-color 0.3s;
 }
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: #f8f7f0;
   text-align: center;
   text-transform: uppercase;
   font-size: 1rem;
@@ -25,20 +25,20 @@ nav a {
 
 nav a:hover {
   font-weight: bold;
-  background-color: #ccc;
-  color: #000;
+  background-color: #adbae4;
+  color: #134470;
 }
 
 /* Modo Escuro */
 body.modo-escuro nav {
-  background-color: #152828;
+  background-color: #222b52;
 }
 
 body.modo-escuro nav a {
-  color: #e0e0e0;
+  color: #f8f7f0;
 }
 
 body.modo-escuro nav a:hover {
-  background-color: #444;
-  color: #fff;
+  background-color: #f8f7f0;
+  color: #222b52;
 }

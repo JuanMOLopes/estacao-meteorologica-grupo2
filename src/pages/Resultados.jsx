@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer";
 function EstacaoMeteorologica() {
   return (
     <>
-      <Header titulo="Estação meteorológica" />
+      <Header titulo="Resultados" />
 
       <div className="conteudo">
         <h2>Aprendizados do Projeto</h2>
@@ -37,58 +37,6 @@ function EstacaoMeteorologica() {
           <img src="/Projeto3.png" alt="Imagem 2" />
         </div>
       </div>
-
-      <style>{`
-        .conteudo {
-          font-family: Arial, Helvetica, sans-serif;
-          line-height: 1.6;
-          color: #333;
-          padding: 20px;
-          max-width: 900px;
-          margin: 0 auto;
-        }
-
-        .conteudo h2 {
-          text-align: center;
-          margin-bottom: 15px;
-          color: #164a11ff;
-        }
-
-        .conteudo p {
-          text-align: justify;
-          font-size: 16px;
-        }
-
-        .video-container {
-          display: flex;
-          justify-content: center;
-          margin-top: 20px;
-        }
-
-        .video-container iframe {
-          border-radius: 10px;
-          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        .galeria {
-          display: flex;
-          gap: 20px;
-          flex-wrap: wrap;
-          justify-content: center;
-          margin-top: 20px;
-        }
-
-        .galeria img {
-          width: 250px;
-          border-radius: 8px;
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-          transition: transform 0.3s ease-in-out;
-        }
-
-        .galeria img:hover {
-          transform: scale(1.05);
-        }
-      `}</style>
 
       <Footer />
     </>
