@@ -4,28 +4,23 @@ import Footer from "../components/Footer/Footer";
 import TextoDireita from "../components/TextoDireita/TextoDireita";
 import TextoEsquerda from "../components/TextoEsquerda/TextoEsquerda";
 
-
 function Projeto() {
   return (
-        <>
+    <>
       <Header titulo="O Projeto" />
 
       <div className="conteudo">
-       
         <div className="secao-texto">
           <TextoEsquerda
             titulo="O Problema"
-            texto="Monitorar com precisão fatores como temperatura, umidade e a concentração de gases poluentes (qualidade do ar) é fundamental não apenas para o conforto, mas, principalmente, para a saúde e a segurança.Variações extremas de temperatura e umidade podem afetar a conservação de equipamentos, produtos e a integridade estrutural de ambientes. Mais crucialmente, a má qualidade do ar, resultante do acúmulo de gases nocivos ou da falta de ventilação, é um fator de risco direto, podendo causar problemas respiratórios e, em casos mais graves, intoxicações. Portanto, ter dados confiáveis e em tempo real sobre esses parâmetros é o primeiro passo para tomar decisões proativas e manter ambientes salubres e controlados.
-            "
-            imagem="https://www.multirio.rj.gov.br/images/img_2016_10/Imagem_6_Canudos_village.jpg"
+            texto="Monitorar com precisão fatores como temperatura, umidade e a concentração de gases poluentes (qualidade do ar) é fundamental não apenas para o conforto, mas, principalmente, para a saúde e a segurança.Variações extremas de temperatura e umidade podem afetar a conservação de equipamentos, produtos e a integridade estrutural de ambientes. Mais crucialmente, a má qualidade do ar, resultante do acúmulo de gases nocivos ou da falta de ventilação, é um fator de risco direto, podendo causar problemas respiratórios e, em casos mais graves, intoxicações. Portanto, ter dados confiáveis e em tempo real sobre esses parâmetros é o primeiro passo para tomar decisões proativas e manter ambientes salubres e controlados."
+            imagem="/projeto-img1.png"
           />
           <TextoDireita
             titulo="A Solução"
-            texto="A Internet das Coisas (IoT) surge como a solução ideal para esse desafio de monitoramento. Por meio da integração de hardware e software, a IoT permite a instalação de sensores específicos (como o DHT11 e o MQ-135, no caso do projeto) que fazem a leitura automática dos parâmetros ambientais (temperatura, umidade e gases). O grande diferencial é a comunicação em tempo real: um microcontrolador (ESP32) coleta esses dados e os envia instantaneamente, via Wi-Fi, para uma plataforma central (servidor Mosquitto). Isso elimina a necessidade de checagens manuais e possibilita a visualização imediata em qualquer lugar (via cliente MQTT no celular), transformando a coleta de dados isolada em um sistema de vigilância contínuo e inteligente.
-"
-            imagem="https://static.wixstatic.com/media/2a6663_9106d07f5ee642a4a947b66f98af9e7c~mv2.jpg/v1/fill/w_560,h_420,al_c,lg_1,q_80,enc_avif,quality_auto/2a6663_9106d07f5ee642a4a947b66f98af9e7c~mv2.jpg"
+            texto="A Internet das Coisas (IoT) surge como a solução ideal para esse desafio de monitoramento. Por meio da integração de hardware e software, a IoT permite a instalação de sensores específicos (como o DHT11 e o MQ-135, no caso do projeto) que fazem a leitura automática dos parâmetros ambientais (temperatura, umidade e gases). O grande diferencial é a comunicação em tempo real: um microcontrolador (ESP32) coleta esses dados e os envia instantaneamente, via Wi-Fi, para uma plataforma central (servidor Mosquitto). Isso elimina a necessidade de checagens manuais e possibilita a visualização imediata em qualquer lugar (via cliente MQTT no celular), transformando a coleta de dados isolada em um sistema de vigilância contínuo e inteligente."
+            imagem="/projeto-img2.png"
           />
-          
         </div>
       </div>
 

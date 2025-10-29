@@ -11,7 +11,6 @@ function FAQ(props) {
           {props.pergunta}
         </button>
       </div>
-
       {mostrarResposta && (
         <div className="resposta">
           <p>{props.resposta}</p>

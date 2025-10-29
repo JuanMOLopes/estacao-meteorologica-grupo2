@@ -1,0 +1,194 @@
+#include <WiFi.h>
+#include <PubSubClient.h>
+#include <DHT.h>
+//------------------------------------------------------------------------------
+// Projeto: ESP32 - Leitura de sensores (DHT11 e sensor de gás) e envio via MQTT
+// Descrição: Este sketch conecta-se a uma rede Wi-Fi, lê temperatura, umidade
+// e um valor de gás analógico, acende LEDs de alerta conforme limites e publica
+// os valores em tópicos MQTT.
+//------------------------------------------------------------------------------
+
+// --- Pinos e LEDs ---
+#define LED_TEMPERATURA 18
+#define LED_UMIDADE 17
+#define LED_GAS 27
+
+#define PINDOUT 35     // Pino do sensor de gás (entrada analógica)
+#define DHT_PIN 16     // Pino de dados do sensor DHT
+#define DHT_TYPE DHT11 // Tipo do sensor DHT (DHT11 neste caso)
+
+// --- Rede Wi-Fi ---
+// Credenciais da rede Wi-Fi que o ESP32 irá conectar.
+const char* WIFI_SSID = "AP360_SENAI";
+const char* WIFI_PASS = "senai123";
+
+// --- Limite para o sensor de gás ---
+// Valor limite usado para acionar alerta de gás.
+const int limite = 3628; // Se 400 PPM = 3628 na leitura analógica
+
+// --- Variáveis globais ---
+// Variáveis que armazenam as leituras dos sensores.
+float temp = 0.0;
+float hum = 0.0;
+int gas = 0;
+
+// --- Configurações MQTT ---
+// Endereço do broker MQTT, porta e ID do cliente.
+const char* MQTT_SERVER = "10.136.38.135";
+const int MQTT_PORT = 1883;
+const char* CLIENT_ID = "ESP32-Grupo2";    
+
+// Tópicos de publicação MQTT
+// Os tópicos recebem as mensagens com as leituras.
+#define TOPIC_TEMP "aulas/IOT/grupo2/temperatura"
+#define TOPIC_HUM  "aulas/IOT/grupo2/umidade"
+#define TOPIC_GAS  "aulas/IOT/grupo2/gas"
+
+// --- Objetos ---
+// Instâncias dos objetos usados: sensor DHT, cliente WiFi e cliente MQTT
+DHT dht(DHT_PIN, DHT_TYPE);
+WiFiClient espClient;
+PubSubClient mqttClient(espClient);
+
+// Controle do intervalo de publicação
+unsigned long lastMsg = 0;           // Armazena o timestamp da última publicação
+const long PUBLISH_INTERVAL = 5000;  // Intervalo de publicação (5 segundos)
+
+// ---------------- FUNÇÕES ----------------
+
+// Conecta ao Wi-Fi
+// Esta função faz a conexão blocking até que o ESP32 obtenha IP. Em
+void setup_wifi() {
+  delay(10);
+  Serial.print("Conectando a rede: ");
+  Serial.println(WIFI_SSID);
+
+  WiFi.begin(WIFI_SSID, WIFI_PASS);
+
+  // Aguarda conexão (loop blocking).
+  // 500 ms enquanto a conexão não estiver estabelecida.
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+
+  Serial.println("\\nWiFi Conectado!");
+  Serial.print("Endereço IP: ");
+  Serial.println(WiFi.localIP());
+}
+
+// Tenta reconectar ao broker MQTT
+// A função entra em loop até estabelecer conexão.
+void reconnect_mqtt() {
+  while (!mqttClient.connected()) {
+    Serial.print("Tentando conexão MQTT...");
+    if (mqttClient.connect(CLIENT_ID)) {
+      Serial.println(" Conectado!");
+    } else {
+      Serial.print(" Falha, rc=");
+      Serial.print(mqttClient.state());
+      Serial.println(" - Tentando novamente em 5 segundos...");
+      delay(5000);
+    }
+  }
+}
+
+// Publica dados em um tópico MQTT
+// 'value' é convertido para string com duas casas decimais e enviado como
+// payload. O buffer tem 10 bytes — suficiente para valores simples.
+void publish_data(const char* topic, float value) {
+  char payload[10];
+  snprintf(payload, sizeof(payload), "%.2f", value);
+  mqttClient.publish(topic, payload);
+
+  // Log local via Serial
+  Serial.print("Publicado em ");
+  Serial.print(topic);
+  Serial.print(": ");
+  Serial.println(payload);
+}
+
+// ---------------- SETUP ----------------
+// Configura pinos, inicializa Serial, DHT, Wi-Fi e configura o servidor MQTT
+void setup() {
+  pinMode(LED_TEMPERATURA, OUTPUT);
+  pinMode(LED_UMIDADE, OUTPUT);
+  pinMode(DHT_PIN, INPUT); 
+  pinMode(LED_GAS, OUTPUT);
+  pinMode(PINDOUT, INPUT);
+
+  Serial.begin(115200);
+
+  // Inicializa o sensor DHT
+  dht.begin();
+
+  setup_wifi();
+  // Define o broker MQTT que será usado pelo cliente
+  mqttClient.setServer(MQTT_SERVER, MQTT_PORT);
+}
+
+// ---------------- LOOP ----------------
+// Loop principal: mantém a conexão MQTT, processa o cliente MQTT e a cada
+// intervalo definido realiza leituras, publica e controla LEDs de alerta.
+void loop() {
+  // Mantém conexão MQTT (se desconectado, tenta reconectar).
+  if (!mqttClient.connected()) {
+    reconnect_mqtt();
+  }
+  mqttClient.loop();
+
+  // Lógica de tempo (não-bloqueante) 
+  unsigned long now = millis();
+  if (now - lastMsg > PUBLISH_INTERVAL) {
+    lastMsg = now;
+
+    // Leitura dos sensores
+    temp = dht.readTemperature();
+    hum = dht.readHumidity();
+    gas = analogRead(PINDOUT);
+
+    // Verifica se houve erro na leitura.
+    if (isnan(temp) || isnan(hum) || isnan(gas)) {
+      Serial.println("Erro ao ler do sensor!");
+      return; // Abortamos esta iteração do loop
+    }
+
+    // Imprime leituras no monitor serial
+    Serial.println("--- Dados do Sensor ---");
+    Serial.print("Temperatura: "); Serial.print(temp); Serial.println("°C");
+    Serial.print("Umidade: "); Serial.print(hum); Serial.println("%");
+    Serial.print("Gás: "); Serial.println(gas);
+    Serial.println("------------------------");
+
+    // Publica dados no MQTT
+    publish_data(TOPIC_TEMP, temp);
+    publish_data(TOPIC_HUM, hum);
+    publish_data(TOPIC_GAS, gas);
+
+    // Lógica de alerta via LEDs
+
+    // Se temperatura maior que 40ºC, exibe alerta
+    if (temp > 40) {
+      Serial.println("ALERTA: Temperatura alta!");
+      digitalWrite(LED_TEMPERATURA, HIGH);
+    } else {
+      digitalWrite(LED_TEMPERATURA, LOW);
+    }
+
+    // Se umidade menor que 20%, exibe alerta
+    if (hum < 20) {
+      Serial.println("ALERTA: Umidade baixa!");
+      digitalWrite(LED_UMIDADE, HIGH);
+    } else {
+      digitalWrite(LED_UMIDADE, LOW);
+    }
+
+    // Se valor do gás acima do limite, exibe alerta
+    if (gas > limite) {
+      Serial.println("CUIDADO: Gás tóxico detectado!");
+      digitalWrite(LED_GAS, HIGH);
+    } else {
+      digitalWrite(LED_GAS, LOW);
+    }
+  }  
+}
